@@ -102,3 +102,25 @@ bot.onText(/\/start/, msg => {
     }
   });
 });
+
+bot.onText(/\/mitm/, msg => {
+  bot.sendMessage(
+      msg.chat.id,
+      "https://www.youtube.com/watch?v=_ysomCGaZLw"
+  );
+});
+
+bot.onText(/\/notshy/, msg => {
+  bot.sendMessage(
+      msg.chat.id,
+      "https://www.youtube.com/watch?v=wTowEKjDGkU"
+  );
+});
+
+bot.onText(/\/streamITZY/, msg => {
+  bot.sendMessage(msg.chat.id, "Welcome", {
+    reply_markup: {
+      keyboard: [["/mitm", "/notshy"]]
+    }
+  });
+});
