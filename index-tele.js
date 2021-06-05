@@ -124,3 +124,16 @@ bot.onText(/\/streamITZY/, msg => {
     }
   });
 });
+
+bot.on("message", msg => {
+  var MIDZY_Alert = "hey bot";
+  if (
+      msg.text
+          .toString()
+          .toLowerCase()
+          .indexOf(MIDZY_Alert) === 0
+  ) {
+    bot.sendMessage(msg.chat.id, "Hey there " + msg.from.first_name + ", I see you stan ITZY, so here you go");
+    bot.sendPhoto(msg.chat.id,"https://i.pinimg.com/originals/f9/3a/8d/f93a8d254aa6721a071a2705c2409f7c.png" );
+  }
+});
