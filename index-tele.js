@@ -137,3 +137,10 @@ bot.on("message", msg => {
     bot.sendPhoto(msg.chat.id,"https://i.pinimg.com/originals/f9/3a/8d/f93a8d254aa6721a071a2705c2409f7c.png" );
   }
 });
+
+// insert link of the .gif file, it can be http link, local file or a file from telegram's server - requires telegram gif id
+bot.onText(/\/trio/, msg => {
+    bot.sendAnimation(
+        msg.chat.id,"original.gif"
+    );
+});
