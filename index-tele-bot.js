@@ -261,3 +261,18 @@ bot.onText(/\/leechaeryeong/, msg => {
         chaeryeong_birthday
     );
 });
+
+// scraped from https://www.soompi.com/article/1473723wpp/mamamoos-wheein-reported-to-leave-rbw-agency-says-discussions-are-still-ongoing
+got(vgmUrl).then(response =>{
+    const dom_img = new JSDOM(response.body);
+    const imgSrc = dom_img.window.document.querySelector('.image-wrapper img').getAttribute("data-src");
+    console.log(imgSrc);
+    bot.onText(/\/scrape/, msg => {
+        bot.sendMessage(
+            msg.chat.id,
+            imgSrc
+        );
+    });
+}).catch(err => {
+    console.log(err);
+});
