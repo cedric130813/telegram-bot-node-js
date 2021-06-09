@@ -12,10 +12,11 @@ got(vgmUrl).then(response => {
     console.log(err);
 });
 
-// got(vgmUrl).then(response =>{
-//     const dom_img = new JSDOM(response.body);
-//     const imgSrc = dom_img.window.document.querySelector('.image-wrapper img').getAttribute("data-src");
-//     console.log(imgSrc);
-// }).catch(err => {
-//     console.log(err);
-// });
+// scrapes the image of vgmURL
+got(vgmUrl).then(response =>{
+    const dom_img = new JSDOM(response.body);
+    const imgSrc = dom_img.window.document.querySelector('.image-wrapper img').getAttribute("data-src");
+    console.log(imgSrc);
+}).catch(err => {
+    console.log(err);
+});
