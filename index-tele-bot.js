@@ -6,7 +6,7 @@ const token = <Telegram Token>;
 // Create a bot that uses 'polling' to fetch new updates
 const bot = new TelegramBot(token, { polling: true });
 
-//scraper from JSDOM
+// Scraper from JSDOM
 const fs = require('fs');
 const got = require('got');
 const jsdom = require("jsdom");
