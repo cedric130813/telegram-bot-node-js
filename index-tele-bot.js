@@ -6,6 +6,13 @@ const token = <Telegram Token>;
 // Create a bot that uses 'polling' to fetch new updates
 const bot = new TelegramBot(token, { polling: true });
 
+//scraper from JSDOM
+const fs = require('fs');
+const got = require('got');
+const jsdom = require("jsdom");
+const { JSDOM } = jsdom;
+const vgmUrl= 'https://www.soompi.com/article/1473723wpp/mamamoos-wheein-reported-to-leave-rbw-agency-says-discussions-are-still-ongoing';
+
 // Matches "/echo [whatever]"
 bot.onText(/\/echo (.+)/, (msg, match) => {
   // 'msg' is the received Message from Telegram
