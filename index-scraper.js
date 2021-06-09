@@ -5,6 +5,7 @@ const { JSDOM } = jsdom;
 
 const vgmUrl= 'https://www.soompi.com/article/1473723wpp/mamamoos-wheein-reported-to-leave-rbw-agency-says-discussions-are-still-ongoing';
 
+// scrapes the Title of vgmURL
 got(vgmUrl).then(response => {
     const dom = new JSDOM(response.body);
     console.log(dom.window.document.querySelector('title').textContent);
