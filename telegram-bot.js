@@ -26,8 +26,7 @@ bot.onText(/\/echo (.+)/, (msg, match) => {
   bot.sendMessage(chatId, resp);
 });
 
-// Listen for any kind of message. There are different kinds of
-// messages.
+// Listen for any kind of message. There are different kinds of messages.
 bot.on("message", msg => {
   var Hi = "hi";
   if (
@@ -63,10 +62,12 @@ bot.on("message", msg => {
   }
 });
 
+// replies "Hey there MIDZY" (note: MIDZY is a term for a fan of ITZY, a K-pop group) in response to /hello
 bot.onText(/\/hello/, msg => {
   bot.sendMessage(msg.chat.id, "Hey there MIDZY!");
 });
 
+// sends gif link in response to /yuna, /yeji, /ryujin, /chaeryeong and /lia
 bot.onText(/\/yuna/, msg => {
   bot.sendMessage(
     msg.chat.id,
@@ -110,6 +111,7 @@ bot.onText(/\/start/, msg => {
   });
 });
 
+// sends YouTube video links in response to /mitm command
 bot.onText(/\/mitm/, msg => {
   bot.sendMessage(
       msg.chat.id,
@@ -117,6 +119,7 @@ bot.onText(/\/mitm/, msg => {
   );
 });
 
+// sends YouTube video links in response to /notshy command
 bot.onText(/\/notshy/, msg => {
   bot.sendMessage(
       msg.chat.id,
@@ -124,6 +127,7 @@ bot.onText(/\/notshy/, msg => {
   );
 });
 
+// sends keyboard options of /mitm and /notshy in response to /streamITZY command
 bot.onText(/\/streamITZY/, msg => {
   bot.sendMessage(msg.chat.id, "Welcome", {
     reply_markup: {
@@ -153,10 +157,10 @@ bot.onText(/\/trio/, msg => {
     );
 });
 
-//added a simple birthday countdown
+// added a simple birthday countdown
 // thanks to w3resource at https://www.w3resource.com/javascript-exercises/javascript-basic-exercise-9.php
 
-//Yuna's birthday
+// Yuna's birthday
 today=new Date();
 var cmas=new Date(today.getFullYear(), 11, 9);
 if (today.getMonth()==11 && today.getDate()>9)
@@ -165,7 +169,7 @@ if (today.getMonth()==11 && today.getDate()>9)
 }
 var one_day=1000*60*60*24;
 var yuna_birthday = Math.ceil((cmas.getTime()-today.getTime())/(one_day));
-//https://www.w3resource.com/javascript-exercises/javascript-basic-exercise-9.php
+// https://www.w3resource.com/javascript-exercises/javascript-basic-exercise-9.php
 if (yuna_birthday < 0) {
     var shinyuna = Math.abs(yuna_birthday) +" days since Yuna's birthday!";
 } else {
@@ -179,7 +183,7 @@ bot.onText(/\/shinyuna/, msg => {
     );
 });
 
-//Lia's birthday
+// Lia's birthday
 today=new Date();
 var cmas=new Date(today.getFullYear(), 6, 21);
 if (today.getMonth()==6 && today.getDate()>21)
