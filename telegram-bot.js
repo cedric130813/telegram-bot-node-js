@@ -157,8 +157,8 @@ bot.onText(/\/trio/, msg => {
     );
 });
 
-// added a simple birthday countdown
-// thanks to w3resource at https://www.w3resource.com/javascript-exercises/javascript-basic-exercise-9.php
+// Added a simple birthday countdown
+// Thanks to w3resource at https://www.w3resource.com/javascript-exercises/javascript-basic-exercise-9.php
 
 // Yuna's birthday
 today=new Date();
@@ -171,9 +171,9 @@ var one_day=1000*60*60*24;
 var yuna_birthday = Math.ceil((cmas.getTime()-today.getTime())/(one_day));
 // https://www.w3resource.com/javascript-exercises/javascript-basic-exercise-9.php
 if (yuna_birthday < 0) {
-    var shinyuna = Math.abs(yuna_birthday) +" days since Yuna's birthday!";
+    var shinyuna = Math.abs(yuna_birthday) + " days since Yuna's birthday!";
 } else {
-    var shinyuna = Math.abs(yuna_birthday) +" days until Yuna's birthday!";
+    var shinyuna = Math.abs(yuna_birthday) + " days until Yuna's birthday!";
 }
 
 bot.onText(/\/shinyuna/, msg => {
