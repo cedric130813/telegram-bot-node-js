@@ -298,7 +298,7 @@ bot.on("message", msg => {
             result_sentiment_decision = "negative";
         }
         else {
-            result_sentiment_decision = "undetermined"
+            result_sentiment_decision = "undetermined";
         }
     bot.sendMessage(
         msg.chat.id,
