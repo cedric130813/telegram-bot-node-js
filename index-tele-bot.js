@@ -283,3 +283,24 @@ got(vgmUrl).then(response =>{
 }).catch(err => {
     console.log(err);
 });
+
+// sentiment analysis of response to the bot
+var Sentiment_analysis = require('sentiment');
+
+bot.on("message", msg => {
+    var sentiment_text = msg.text
+    var sentiment_response = new Sentiment_analysis();
+    var result_sentiment = sentiment_response.analyze(sentiment_text), result_sentiment_decision;
+        if (result_sentiment.score > 0) {
+            result_sentiment_decision = "positive";
+        }
+        else if (result_sentiment.score < 0) {
+            result_sentiment_decision = "negative";
+        }
+        else {
+            result_sentiment_decision = "undetermined"
+        }
+    bot.sendMessage(
+        msg.chat.id,
+        "The sentiment is " + result_sentiment_decision + " and the sentiment score is " + result_sentiment.score);
+});
