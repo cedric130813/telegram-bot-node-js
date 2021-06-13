@@ -132,6 +132,7 @@ bot.onText(/\/streamITZY/, msg => {
   });
 });
 
+// sends message in response to "Hey bot"
 bot.on("message", msg => {
   var MIDZY_Alert = "hey bot";
   if (
