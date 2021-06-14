@@ -321,13 +321,14 @@ var client = new Twitter({
 //     }
 // });
 
-// posts "I love Twitter"
+// sends a HTTP POST request to the Twitter API and posts "I Love Twitter"
 // client.post('statuses/update', {status: 'I Love Twitter'},  function(error, tweet, response) {
 //     if(error) throw error;
 //     console.log(tweet);  // Tweet body.
 //     console.log(response);  // Raw response object.
 // });
 
+// sends a HTTP GET request to the Twitter API
 var params = {screen_name: 'ITZYofficial'};
 client.get('statuses/user_timeline', params, function(error, tweets, response) {
     if (!error) {
