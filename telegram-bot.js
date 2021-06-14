@@ -300,3 +300,50 @@ bot.on("message", msg => {
         msg.chat.id,
         "The sentiment is " + result_sentiment_decision + " and the sentiment score is " + result_sentiment.score);
 });
+
+// twitter api
+
+var Twitter = require('twitter');
+require('dotenv').config();
+
+// stores API and secrets keys security in dot env
+var client = new Twitter({
+    consumer_key: process.env.TWITTER_CONSUMER_KEY,
+    consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
+    access_token_key: process.env.TWITTER_ACCESS_TOKEN_KEY,
+    access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
+});
+
+// var params = {screen_name: 'nodejs'};
+// client.get('statuses/user_timeline', params, function(error, tweets, response) {
+//     if (!error) {
+//         console.log(tweets);
+//     }
+// });
+
+// posts "I love Twitter"
+// client.post('statuses/update', {status: 'I Love Twitter'},  function(error, tweet, response) {
+//     if(error) throw error;
+//     console.log(tweet);  // Tweet body.
+//     console.log(response);  // Raw response object.
+// });
+
+var params = {screen_name: 'ITZYofficial'};
+client.get('statuses/user_timeline', params, function(error, tweets, response) {
+    if (!error) {
+        // console.log(tweets);
+        // console.log(response);
+        // console.log(tweets);
+        const array_itzy = Object.entries(tweets);
+        // console.log(array_itzy[0][1].text);
+        // 0 denotes the first tweet, 1 denotes the text
+        const text_itzy = array_itzy[0][1].text;
+        // console.log(text_itzy);
+        bot.onText(/\/twitter_GET/, msg => {
+            bot.sendMessage(
+                msg.chat.id,
+                text_itzy
+            );
+        });
+    }
+});
