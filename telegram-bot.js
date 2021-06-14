@@ -169,12 +169,7 @@ if (today.getMonth()==11 && today.getDate()>9)
 }
 var one_day=1000*60*60*24;
 var yuna_birthday = Math.ceil((cmas.getTime()-today.getTime())/(one_day));
-// https://www.w3resource.com/javascript-exercises/javascript-basic-exercise-9.php
-if (yuna_birthday < 0) {
-    var shinyuna = Math.abs(yuna_birthday) + " days since Yuna's birthday!";
-} else {
-    var shinyuna = Math.abs(yuna_birthday) + " days until Yuna's birthday!";
-}
+var shinyuna = Math.abs(yuna_birthday) + " days until Yuna's birthday!";
 
 bot.onText(/\/shinyuna/, msg => {
     bot.sendMessage(
@@ -192,11 +187,7 @@ if (today.getMonth()==6 && today.getDate()>21)
 }
 var one_day=1000*60*60*24;
 var lia_birthday = Math.ceil((cmas.getTime()-today.getTime())/(one_day));
-if (lia_birthday < 0) {
-    var choilia = Math.abs(lia_birthday) +" days since Lia's birthday!";
-} else {
-    var choilia = Math.abs(lia_birthday) +" days until Lia's birthday!";
-}
+var choilia = Math.abs(lia_birthday) +" days until Lia's birthday!";
 
 bot.onText(/\/choijisu/, msg => {
     bot.sendMessage(
@@ -214,12 +205,7 @@ if (today.getMonth()==4 && today.getDate()>21)
 }
 var one_day=1000*60*60*24;
 var yeji_birthday = Math.ceil((cmas.getTime()-today.getTime())/(one_day));
-// console.log(Math.abs(yeji_birthday) +" days left since/until Yeji's Birthday");
-if (yeji_birthday < 0) {
-    var hwangyeji = Math.abs(yeji_birthday) +" days since Yeji's birthday!";
-} else {
-    var hwangyeji = Math.abs(yeji_birthday) +" days until Yeji's birthday!";
-}
+var hwangyeji = Math.abs(yeji_birthday) +" days until Yeji's birthday!";
 
 bot.onText(/\/hwangyeji/, msg => {
     bot.sendMessage(
@@ -237,12 +223,7 @@ if (today.getMonth()==3 && today.getDate()>17)
 }
 var one_day=1000*60*60*24;
 var ryujin_birthday = Math.ceil((cmas.getTime()-today.getTime())/(one_day));
-// console.log(Math.abs(ryujin_birthday) +" days left since/until Ryujin's Birthday");
-if (ryujin_birthday < 0) {
-    var shinryujin = Math.abs(ryujin_birthday) +" days since Ryujin's birthday!";
-} else {
-    var shinryujin = Math.abs(ryujin_birthday) +" days until Ryujin's birthday!";
-}
+var shinryujin = Math.abs(ryujin_birthday) +" days since Ryujin's birthday!";
 
 bot.onText(/\/shinryujin/, msg => {
     bot.sendMessage(
@@ -260,12 +241,7 @@ if (today.getMonth()==5 && today.getDate()>5)
 }
 var one_day=1000*60*60*24;
 var chae_birthday = Math.ceil((cmas.getTime()-today.getTime())/(one_day));
-// console.log(Math.abs(chae_birthday) +" days left since/until Chaeryeong's Birthday");
-if (chae_birthday < 0) {
-    var chaeryeong_birthday = Math.abs(chae_birthday) +" days since Chaeryeong's birthday!";
-} else {
-    var chaeryeong_birthday = Math.abs(chae_birthday) +" days until Chaeryeong's birthday!";
-}
+var chaeryeong_birthday = Math.abs(chae_birthday) +" days until Chaeryeong's birthday!";
 
 bot.onText(/\/leechaeryeong/, msg => {
     bot.sendMessage(
