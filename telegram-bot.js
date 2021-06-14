@@ -169,11 +169,10 @@ if (today.getMonth()==11 && today.getDate()>9)
 }
 var one_day=1000*60*60*24;
 var yuna_birthday = Math.ceil((cmas.getTime()-today.getTime())/(one_day));
-//https://www.w3resource.com/javascript-exercises/javascript-basic-exercise-9.php
 if (yuna_birthday < 0) {
-    var shinyuna = Math.abs(yuna_birthday) +" days since Yuna's birthday!";
+    var shinyuna = Math.abs(yuna_birthday) + " days since Yuna's birthday!"; // if yuna_birthday < 0, it means that the birthday this year had already past
 } else {
-    var shinyuna = Math.abs(yuna_birthday) +" days until Yuna's birthday!";
+    var shinyuna = Math.abs(yuna_birthday) + " days until Yuna's birthday!";
 }
 
 bot.onText(/\/shinyuna/, msg => {
@@ -193,9 +192,9 @@ if (today.getMonth()==6 && today.getDate()>21)
 var one_day=1000*60*60*24;
 var lia_birthday = Math.ceil((cmas.getTime()-today.getTime())/(one_day));
 if (lia_birthday < 0) {
-    var choilia = Math.abs(lia_birthday) +" days since Lia's birthday!";
+    var choilia = Math.abs(lia_birthday) + " days since Lia's birthday!"; // if lia_birthday < 0, it means that the birthday this year had already past
 } else {
-    var choilia = Math.abs(lia_birthday) +" days until Lia's birthday!";
+    var choilia = Math.abs(lia_birthday) + " days until Lia's birthday!";
 }
 
 bot.onText(/\/choijisu/, msg => {
