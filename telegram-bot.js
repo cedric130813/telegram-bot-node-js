@@ -215,9 +215,9 @@ var one_day=1000*60*60*24;
 var yeji_birthday = Math.ceil((cmas.getTime()-today.getTime())/(one_day));
 // console.log(Math.abs(yeji_birthday) +" days left since/until Yeji's Birthday");
 if (yeji_birthday < 0) {
-    var hwangyeji = Math.abs(yeji_birthday) +" days since Yeji's birthday!";
+    var hwangyeji = Math.abs(yeji_birthday) + " days since Yeji's birthday!";
 } else {
-    var hwangyeji = Math.abs(yeji_birthday) +" days until Yeji's birthday!";
+    var hwangyeji = Math.abs(yeji_birthday) + " days until Yeji's birthday!";
 }
 
 bot.onText(/\/hwangyeji/, msg => {
@@ -238,9 +238,9 @@ var one_day=1000*60*60*24;
 var ryujin_birthday = Math.ceil((cmas.getTime()-today.getTime())/(one_day));
 // console.log(Math.abs(ryujin_birthday) +" days left since/until Ryujin's Birthday");
 if (ryujin_birthday < 0) {
-    var shinryujin = Math.abs(ryujin_birthday) +" days since Ryujin's birthday!";
+    var shinryujin = Math.abs(ryujin_birthday) + " days since Ryujin's birthday!";
 } else {
-    var shinryujin = Math.abs(ryujin_birthday) +" days until Ryujin's birthday!";
+    var shinryujin = Math.abs(ryujin_birthday) + " days until Ryujin's birthday!";
 }
 
 bot.onText(/\/shinryujin/, msg => {
@@ -260,9 +260,9 @@ if (today.getMonth()==5 && today.getDate()>5)
 var one_day=1000*60*60*24;
 var chae_birthday = Math.ceil((cmas.getTime()-today.getTime())/(one_day));
 if (chae_birthday < 0) {
-    var chaeryeong_birthday = Math.abs(chae_birthday) +" days since Chaeryeong's birthday!";
+    var chaeryeong_birthday = Math.abs(chae_birthday) + " days since Chaeryeong's birthday!";
 } else {
-    var chaeryeong_birthday = Math.abs(chae_birthday) +" days until Chaeryeong's birthday!";
+    var chaeryeong_birthday = Math.abs(chae_birthday) + " days until Chaeryeong's birthday!";
 }
 
 // scraped from https://www.soompi.com/article/1473723wpp/mamamoos-wheein-reported-to-leave-rbw-agency-says-discussions-are-still-ongoing
