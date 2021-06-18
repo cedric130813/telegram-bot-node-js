@@ -250,7 +250,7 @@ bot.onText(/\/shinryujin/, msg => {
     );
 });
 
-//Chaeryeong's birthday
+// Chaeryeong's birthday
 today=new Date();
 var cmas=new Date(today.getFullYear(), 5, 5);
 if (today.getMonth()==5 && today.getDate()>5)
@@ -280,7 +280,7 @@ got(vgmUrl).then(response =>{
     console.log(err);
 });
 
-// sentiment analysis of response to the bot
+// Sentiment analysis of response to the bot
 var Sentiment_analysis = require('sentiment');
 
 bot.on("message", msg => {
@@ -301,12 +301,12 @@ bot.on("message", msg => {
         "The sentiment is " + result_sentiment_decision + " and the sentiment score is " + result_sentiment.score);
 });
 
-// twitter api
+// Twitter API
 
 var Twitter = require('twitter');
 require('dotenv').config();
 
-// stores API and secrets keys security in dot env
+// stores API and secrets keys in .env
 var client = new Twitter({
     consumer_key: process.env.TWITTER_CONSUMER_KEY,
     consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
@@ -314,19 +314,12 @@ var client = new Twitter({
     access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
 });
 
-// var params = {screen_name: 'nodejs'};
-// client.get('statuses/user_timeline', params, function(error, tweets, response) {
-//     if (!error) {
-//         console.log(tweets);
-//     }
-// });
-
 // sends a HTTP POST request to the Twitter API and posts "I Love Twitter"
-// client.post('statuses/update', {status: 'I Love Twitter'},  function(error, tweet, response) {
-//     if(error) throw error;
-//     console.log(tweet);  // Tweet body.
-//     console.log(response);  // Raw response object.
-// });
+client.post('statuses/update', {status: 'I Love Twitter'},  function(error, tweet, response) {
+    if(error) throw error;
+    console.log(tweet);  // Tweet body.
+    console.log(response);  // Raw response object.
+});
 
 // sends a HTTP GET request to the Twitter API
 var params = {screen_name: 'ITZYofficial'};
