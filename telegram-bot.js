@@ -16,6 +16,10 @@ const vgmUrl= 'https://www.soompi.com/article/1473723wpp/mamamoos-wheein-reporte
 // Sentiment Analysis
 var Sentiment_analysis = require('sentiment');
 
+// Twitter API
+var Twitter = require('twitter');
+require('dotenv').config();
+
 // Matches "/echo [whatever]"
 bot.onText(/\/echo (.+)/, (msg, match) => {
   // 'msg' is the received Message from Telegram
@@ -239,10 +243,6 @@ bot.on("message", msg => {
         "The sentiment is " + result_sentiment_decision + " and the sentiment score is " + result_sentiment.score);
 });
 
-// Twitter API
-
-var Twitter = require('twitter');
-require('dotenv').config();
 
 // stores API and secrets keys in .env
 var client = new Twitter({
