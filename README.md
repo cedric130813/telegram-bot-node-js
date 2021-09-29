@@ -1,3 +1,4 @@
+### Telegram Bot (Node.js)
 #### This is a [Telegram Bot API project](https://github.com/cedric130813/telegram-bot-node-js/blob/main/telegram-bot.js) using Node.js, which can perform the following functions:
 *Mini-functions that the bot is able to do*
 1. Automatically replies links, gifs, images, messages when user inputs specific Telegram commands (e.g. /command)
